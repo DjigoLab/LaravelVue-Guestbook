@@ -47907,54 +47907,58 @@ var render = function() {
     "div",
     [
       _vm._l(_vm.signatures, function(signature) {
-        return _c("div", { staticClass: "panel panel-default" }, [
-          _c("div", { staticClass: "panel-heading" }, [
-            _c("span", {
-              staticClass: "glyphicon glyphicon-user",
-              attrs: { id: "start" }
-            }),
-            _vm._v(" "),
-            _c("label", { attrs: { id: "started" } }, [_vm._v("By")]),
-            _vm._v(" " + _vm._s(signature.name) + "\n        ")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "panel-body" }, [
-            _c("div", { staticClass: "col-md-2" }, [
-              _c("div", { staticClass: "thumbnail" }, [
-                _c("img", {
-                  attrs: { src: signature.avatar, alt: signature.name }
-                })
-              ])
+        return _c(
+          "div",
+          { key: signature.id, staticClass: "panel panel-default" },
+          [
+            _c("div", { staticClass: "panel-heading" }, [
+              _c("span", {
+                staticClass: "glyphicon glyphicon-user",
+                attrs: { id: "start" }
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { id: "started" } }, [_vm._v("By")]),
+              _vm._v(" " + _vm._s(signature.name) + "\n        ")
             ]),
             _vm._v(" "),
-            _c("p", [_vm._v(_vm._s(signature.body))])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "panel-footer" }, [
-            _c("span", {
-              staticClass: "glyphicon glyphicon-calendar",
-              attrs: { id: "visit" }
-            }),
-            _vm._v(" " + _vm._s(signature.date) + " |\n            "),
-            _c("span", {
-              staticClass: "glyphicon glyphicon-flag",
-              attrs: { id: "comment" }
-            }),
+            _c("div", { staticClass: "panel-body" }, [
+              _c("div", { staticClass: "col-md-2" }, [
+                _c("div", { staticClass: "thumbnail" }, [
+                  _c("img", {
+                    attrs: { src: signature.avatar, alt: signature.name }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v(_vm._s(signature.body))])
+            ]),
             _vm._v(" "),
-            _c(
-              "a",
-              {
-                attrs: { href: "#", id: "comments" },
-                on: {
-                  click: function($event) {
-                    _vm.report(signature.id)
+            _c("div", { staticClass: "panel-footer" }, [
+              _c("span", {
+                staticClass: "glyphicon glyphicon-calendar",
+                attrs: { id: "visit" }
+              }),
+              _vm._v(" " + _vm._s(signature.date) + " |\n            "),
+              _c("span", {
+                staticClass: "glyphicon glyphicon-flag",
+                attrs: { id: "comment" }
+              }),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  attrs: { href: "#", id: "comments" },
+                  on: {
+                    click: function($event) {
+                      _vm.report(signature.id)
+                    }
                   }
-                }
-              },
-              [_vm._v("Report")]
-            )
-          ])
-        ])
+                },
+                [_vm._v("Report")]
+              )
+            ])
+          ]
+        )
       }),
       _vm._v(" "),
       _c("paginate", {

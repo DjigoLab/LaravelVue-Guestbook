@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="panel panel-default" v-for="signature in signatures">
+        <div class="panel panel-default" v-for="signature in signatures" :key="signature.id">
             <div class="panel-heading">
                 <span class="glyphicon glyphicon-user" id="start"></span>
                 <label id="started">By</label> {{ signature.name }}
